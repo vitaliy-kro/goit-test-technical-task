@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "user": "Elon Reeve Musk",
+    "tweets": 777,
+    "followers": 100500,
+    "avatar": "/avatars/UserImg.png"
+  },
+  {
+    "id": 2,
+    "user": "Riley Bailey",
+    "tweets": 351,
+    "followers": 1005,
+    "avatar": "/avatars/RileyBayleyAvatar.png"
+  },
+  {
+    "id": 3,
+    "user": "Miah Carroll",
+    "tweets": 10,
+    "followers": 100,
+    "avatar": "/avatars/MiahCarrollAvatar.png"
+  },
+  {
+    "id": 4,
+    "user": "Aimee Cross",
+    "tweets": 1251,
+    "followers": 56800,
+    "avatar": "/avatars/AimeeCrossAvatar.png"
+  },
+  {
+    "id": 5,
+    "user": "Hanna Osborn",
+    "tweets": 777,
+    "followers": 100500,
+    "avatar": "/avatars/HannaOsbornAvatar.png"
+  }
+]
