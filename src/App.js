@@ -1,21 +1,8 @@
-import { useState, useEffect } from 'react';
 import { Grid } from '@mui/material';
 import { UserCard } from './components/UserCard/UserCard';
-import fakeDataBase from './fakeDatabase.json';
+import users from './fakeDatabase.json';
 
 export const App = () => {
-  const [users, setUsers] = useState([]);
-  useEffect(() => {
-    const fetch = async () => {
-      const result = await fakeDataBase;
-      setUsers(u => [...u, ...result]);
-    };
-
-    return () => {
-      fetch();
-    };
-  }, []);
-
   return (
     <Grid container spacing={3}>
       {users.map(({ id, avatar, tweets, user, followers }) => (
