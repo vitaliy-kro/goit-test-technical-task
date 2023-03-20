@@ -53,7 +53,7 @@ function App() {
   const user = {
     id: 1,
     name: 'John Doe',
-    avatar: 'https://via.placeholder.com/150',
+    avatar: '/avatars/myavatar.png',
     tweets: 100,
     followers: 500,
   };
