@@ -1,21 +1,19 @@
-import { useState, useEffect } from "react";
-import { Grid } from "@mui/material";
-import { UserCard } from "./components/UserCard/UserCard";
-import fakeDataBase from "./fakeDatabase.json";
+import { useState, useEffect } from 'react';
+import { Grid } from '@mui/material';
+import { UserCard } from './components/UserCard/UserCard';
+import fakeDataBase from './fakeDatabase.json';
 
-function App() {
+export const App = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
     const fetch = async () => {
       const result = await fakeDataBase;
-      setUsers((u) => [...u, ...result]);
+      setUsers(u => [...u, ...result]);
     };
 
     return () => {
       fetch();
     };
-
-    // ;
   }, []);
 
   return (
@@ -33,6 +31,4 @@ function App() {
       ))}
     </Grid>
   );
-}
-
-export default App;
+};

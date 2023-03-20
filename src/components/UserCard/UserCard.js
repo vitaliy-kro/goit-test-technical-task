@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { CardContent, CardActions } from "@mui/material";
-import { NumericFormat } from "react-number-format";
+import { useState, useEffect } from 'react';
+import { CardContent, CardActions } from '@mui/material';
+import { NumericFormat } from 'react-number-format';
 import {
   CardBox,
   Header,
@@ -10,11 +10,11 @@ import {
   UserName,
   UserInfo,
   FollowButton,
-} from "./UserCard.styled";
-import backgroundImage from "../../images/background_image_messages.png";
-import logo from "../../images/Logo.png";
+} from './UserCard.styled';
+import backgroundImage from '../../images/background_image_messages.png';
+import logo from '../../images/Logo.png';
 
-const LOCALSTORAGE_KEY = "Subscribing";
+const LOCALSTORAGE_KEY = 'Subscribing';
 
 export const UserCard = ({ id, avatar, tweets, followersNumber, name }) => {
   const [isFollowing, setIsFollowing] = useState(
@@ -32,7 +32,7 @@ export const UserCard = ({ id, avatar, tweets, followersNumber, name }) => {
     );
   }, [followers, isFollowing, id]);
 
-  const handleFollowChange = (e) => {
+  const handleFollowChange = e => {
     setIsFollowing(!isFollowing);
     setFollowers(!isFollowing ? followers + 1 : followers - 1);
 
@@ -55,25 +55,25 @@ export const UserCard = ({ id, avatar, tweets, followersNumber, name }) => {
         <UserInfo>
           <NumericFormat
             value={tweets}
-            displayType={"text"}
+            displayType={'text'}
             thousandSeparator={true}
-          />{" "}
+          />{' '}
           tweets
         </UserInfo>
         <UserInfo>
           {
             <NumericFormat
               value={followers}
-              displayType={"text"}
+              displayType={'text'}
               thousandSeparator={true}
             />
-          }{" "}
+          }{' '}
           followers
         </UserInfo>
       </CardContent>
       <CardActions sx={{ padding: 0 }}>
         <FollowButton onClick={handleFollowChange} isfollowing={isFollowing}>
-          {isFollowing ? "Following" : "Follow"}
+          {isFollowing ? 'Following' : 'Follow'}
         </FollowButton>
       </CardActions>
     </CardBox>
